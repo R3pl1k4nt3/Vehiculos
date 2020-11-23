@@ -5,6 +5,14 @@ public class Coche extends Vehiculo {
 	private int numeroDeRuedas;
 	private String matricula;
 
+	public void setNumeroDeRuedas(int numeroDeRuedas) {
+		this.numeroDeRuedas = numeroDeRuedas;
+	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
@@ -50,7 +58,7 @@ public class Coche extends Vehiculo {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", " + numeroDeRuedas + " ruedas";
+		return "Placa " + matricula + " - " + super.toString();
 	}
 
 	@Override
@@ -83,6 +91,9 @@ public class Coche extends Vehiculo {
 			return false;
 		return true;
 	}
-
+	
+	public int getNumeroDeRuedas() {
+		return numeroDeRuedas;
+	}
 	
 }

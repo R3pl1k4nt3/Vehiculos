@@ -8,7 +8,7 @@ public class Igualdad {
 		Coche coche2 = new Coche("Seat Ibiza", "Rojo");
 		coche2.setMatricula("1234 BBB");
 		Vehiculo coche3 = coche1;
-
+		System.out.println(coche1);
 		// Igualdad
 		System.out.println("coche1 y coche2 son iguales: " + coche1.equals(coche2));
 		System.out.println("Pinto coche2 de Negro");
