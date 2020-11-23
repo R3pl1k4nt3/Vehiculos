@@ -32,11 +32,5 @@ public class Vehiculo {
 		return getModelo() + "(" + getColor() + ")";
 	}
 
-//	@Override
-//	public String toString() {
-//		return (getModelo() == null ? MODELO_NO_DISPONIBLE : getModelo())
-////		return getModelo()
-//				+ " (" + color + ") " + modelo;
-//	}
 
 }
