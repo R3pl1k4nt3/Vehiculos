@@ -18,7 +18,7 @@ public class Igualdad {
 		coche2.setMatricula("5555 CCC");
 		System.out.println("Los coches siguen siendo iguales: " + coche1.equals(coche2));
 
-		//Identidad
+		// Identidad
 		System.out.println("coche1 y coche2 son el mismo: " + (coche1 == coche2));
 		System.out.println("coche1 y coche3 son el mismo: " + (coche3 == coche1));
 	}

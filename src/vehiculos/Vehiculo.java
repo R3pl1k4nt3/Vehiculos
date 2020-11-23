@@ -32,5 +32,4 @@ public class Vehiculo {
 		return getModelo() + "(" + getColor() + ")";
 	}
 
-
 }

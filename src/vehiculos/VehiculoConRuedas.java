@@ -1,7 +1,7 @@
 package vehiculos;
 
 public abstract class VehiculoConRuedas extends Vehiculo {
-	
+
 	public VehiculoConRuedas() {
 		super();
 	}
@@ -9,7 +9,7 @@ public abstract class VehiculoConRuedas extends Vehiculo {
 	public VehiculoConRuedas(String modelo, String color) {
 		super(modelo, color);
 	}
-	
+
 	public abstract int getNumerodeRuedas();
 
 	@Override

@@ -36,7 +36,7 @@ public class Coche extends Vehiculo {
 
 	@Override
 	public String toString() {
-		return "Placa " + matricula + " - " + super.toString();
+		return "Placa " + matricula + " - " + super.toString() + ", " + numeroDeRuedas + " ruedas";
 	}
 
 	@Override

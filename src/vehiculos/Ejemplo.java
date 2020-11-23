@@ -9,7 +9,7 @@ public class Ejemplo {
 		String colorPorDefecto = "Rojo";
 		Vehiculo miCoche = new Coche("Verde");// .modelo("Mercedes Benz");;
 		Vehiculo miCoche2 = new Coche("Azul");
-		
+
 		Moto moto1 = new Moto("Honda CBR", "Verde");
 		moto1.setMatricula("0666 BNB");
 		System.out.println(moto1);
