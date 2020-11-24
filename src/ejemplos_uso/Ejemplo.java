@@ -1,6 +1,10 @@
-package vehiculos;
+package ejemplos_uso;
 
 import static vehiculos.Coche.*;
+
+import vehiculos.Coche;
+import vehiculos.Moto;
+import vehiculos.Vehiculo;
 
 public class Ejemplo {
 
