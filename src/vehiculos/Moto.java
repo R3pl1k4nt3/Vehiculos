@@ -1,13 +1,9 @@
 package vehiculos;
 
-public class Moto extends Vehiculo {
+public class Moto extends VehiculoConRuedas {
 
 	private int numeroDeRuedas;
 	private String matricula;
-
-	public int getNumeroDeRuedas() {
-		return numeroDeRuedas;
-	}
 
 	public void setNumeroDeRuedas(int numeroDeRuedas) {
 		this.numeroDeRuedas = numeroDeRuedas;
@@ -36,6 +32,11 @@ public class Moto extends Vehiculo {
 	}
 
 	public void setModelo(String modelo) {
+	}
+
+	@Override
+	public int getNumerodeRuedas() {
+		return 2;
 	}
 
 }

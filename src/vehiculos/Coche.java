@@ -1,6 +1,6 @@
 package vehiculos;
 
-public class Coche extends Vehiculo {
+public class Coche extends VehiculoConRuedas {
 
 	private int numeroDeRuedas;
 	private String matricula;
@@ -70,8 +70,9 @@ public class Coche extends Vehiculo {
 		return true;
 	}
 
-	public int getNumeroDeRuedas() {
-		return numeroDeRuedas;
+	@Override
+	public int getNumerodeRuedas() {
+		return 4;
 	}
 
 }
