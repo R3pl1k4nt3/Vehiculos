@@ -30,6 +30,7 @@ public class Coche extends VehiculoConRuedas {
 	public Coche(String modelo, String color, int ruedas) {
 		super(modelo, color);
 		numeroDeRuedas = ruedas;
+		velocidad = 5;
 	}
 
 //	public Coche color(String color) {
@@ -87,6 +88,11 @@ public class Coche extends VehiculoConRuedas {
 	@Override
 	public int getNumeroDeRuedas() {
 		return numeroDeRuedas;
+	}
+	
+	@Override
+	public void arrancar() {
+		System.out.println("Coche arrancado");
 	}
 
 }
