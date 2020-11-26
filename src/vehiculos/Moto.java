@@ -2,6 +2,7 @@ package vehiculos;
 
 public class Moto extends VehiculoConRuedas {
 
+<<<<<<< HEAD
 	private int numeroDeRuedas;
 	private String matricula;
 
@@ -40,3 +41,20 @@ public class Moto extends VehiculoConRuedas {
 	}
 
 }
+=======
+	public Moto(String modelo, String color) {
+		super(modelo, color);
+	}
+
+	@Override
+	public int getNumeroDeRuedas() {
+		return 2;
+	}
+
+	@Override
+	public String toString() {
+		return "Moto: " + super.toString();
+	}
+
+}
+>>>>>>> 12d799a2ef3d76e0fdb76e46413b1c9b954d7600

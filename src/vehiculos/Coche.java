@@ -32,11 +32,34 @@ public class Coche extends VehiculoConRuedas {
 	public Coche(String modelo, String color, int ruedas) {
 		super(modelo, color);
 		numeroDeRuedas = ruedas;
+		velocidad = 5;
 	}
 
+<<<<<<< HEAD
 	@Override
 	public String toString() {
 		return "Placa " + matricula + " - " + super.toString() + ", " + numeroDeRuedas + " ruedas";
+=======
+//	public Coche color(String color) {
+//		setColor(color);
+//		return this;
+//	}
+//	
+//	public Coche modelo(String modelo) {
+//		this.modelo = modelo;
+//		return this;
+//	}
+
+//	public static Coche crearConModelo(String modelo) {
+//		Coche coche = new Coche();
+//		coche.modelo = modelo;
+//		return coche;
+//	}
+
+	@Override
+	public String toString() {
+		return "Placa " + matricula + " - " + super.toString();
+>>>>>>> 12d799a2ef3d76e0fdb76e46413b1c9b954d7600
 	}
 
 	@Override
@@ -71,8 +94,18 @@ public class Coche extends VehiculoConRuedas {
 	}
 
 	@Override
+<<<<<<< HEAD
 	public int getNumerodeRuedas() {
 		return 4;
+=======
+	public int getNumeroDeRuedas() {
+		return numeroDeRuedas;
+	}
+	
+	@Override
+	public void arrancar() {
+		System.out.println("Coche arrancado");
+>>>>>>> 12d799a2ef3d76e0fdb76e46413b1c9b954d7600
 	}
 
 }

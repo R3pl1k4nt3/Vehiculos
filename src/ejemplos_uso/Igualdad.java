@@ -1,4 +1,7 @@
-package vehiculos;
+package ejemplos_uso;
+
+import vehiculos.Coche;
+import vehiculos.Vehiculo;
 
 public class Igualdad {
 
