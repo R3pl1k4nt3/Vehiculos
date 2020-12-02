@@ -3,7 +3,7 @@ package vehiculos;
 import ejemplos_uso.Acelerable;
 import ejemplos_uso.Movible;
 
-public class Vehiculo implements Acelerable {
+public class Vehiculo implements Acelerable, Comparable<Vehiculo> {
 
 	private static final String MODELO_NO_DISPONIBLE = "N/A";
 	private String modelo;
@@ -44,5 +44,12 @@ public class Vehiculo implements Acelerable {
 	public float getAceleracion() {
 		return 2;
 	}
+
+	@Override
+	public int compareTo(Vehiculo vehiculo) {
+		return getModelo().compareTo(vehiculo.getModelo());
+	}
+	
+	
 
 }
