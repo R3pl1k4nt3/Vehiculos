@@ -4,9 +4,14 @@ public class Coche extends VehiculoConRuedas {
 
 	private int numeroDeRuedas;
 	private String matricula;
+	private Motor motor;
 
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
+	}
+	
+	public Motor getMotor() {
+		return motor;
 	}
 
 	public Coche() {
@@ -28,9 +33,14 @@ public class Coche extends VehiculoConRuedas {
 	}
 
 	public Coche(String modelo, String color, int ruedas) {
+		this(modelo, color, ruedas, null);
+	}
+	
+	public Coche(String modelo, String color, int ruedas, Motor motor) {
 		super(modelo, color);
 		numeroDeRuedas = ruedas;
 		velocidad = 5;
+		this.motor = motor;
 	}
 
 //	public Coche color(String color) {
@@ -51,7 +61,7 @@ public class Coche extends VehiculoConRuedas {
 
 	@Override
 	public String toString() {
-		return "Placa " + matricula + " - " + super.toString();
+		return "Placa " + matricula + " - " + super.toString() + " | " + getMotor();
 	}
 
 	@Override

@@ -1,14 +1,18 @@
 package ejemplos_uso;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import vehiculos.Coche;
 import vehiculos.Moto;
+import vehiculos.Motor;
 import vehiculos.Vehiculo;
 
 public class EjemploOrdenacion {
@@ -40,6 +44,9 @@ public class EjemploOrdenacion {
 			}
 		};
 		
+		// En lambda es:
+		// comparador = (v1, v2) -> v1.getColor().compareTo(v2.getColor());
+		
 		System.out.println(vehiculos);
 		vehiculos.sort(null);
 		System.out.println(vehiculos);
@@ -51,10 +58,21 @@ public class EjemploOrdenacion {
 			  );
 
 		vehiculos.forEach(System.out::println);
-		vehiculos.sort(null);
+		vehiculos.sort(null);//Vehiculo.COMPARADOR_LONGITUD_MODELO);
 
 		System.out.println("\nLista ordenada (por modelo):");
 		vehiculos.forEach(System.out::println);
+		
+//		Coche c = new Coche(null, "B", 4, new Motor("C", 90.4f));
+//		System.out.println(c);
+//		System.out.println(c.getMotor());
+		
+//		try {
+//			Method method = c.getClass().getDeclaredMethod("getModelo");
+//			System.out.println(method.invoke(c));
+//		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	public static <T> List<T> ordenar(Collection<T> collection) {
