@@ -1,11 +1,24 @@
 package vehiculos;
 
-public class Coche extends VehiculoConRuedas {
+import comun.Identificable;
+import ejemplos_uso.IdentificableArrancable;
+
+public class Coche extends VehiculoConRuedas implements Identificable<Long> {
 
 	private int numeroDeRuedas;
 	private String matricula;
 	private Motor motor;
+	private Long id = 0L;
 
+	@Override
+	public Long getId() {
+		return id;
+	}
+	
+	public String getMatricula() {
+		return matricula;
+	}
+	
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
@@ -61,14 +74,14 @@ public class Coche extends VehiculoConRuedas {
 
 	@Override
 	public String toString() {
-		return "Placa " + matricula + " - " + super.toString() + " | " + getMotor();
+		return "Placa " + getMatricula() + " - " + super.toString() + " | " + getMotor();
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((matricula == null) ? 0 : matricula.hashCode());
+		result = prime * result + ((getMatricula() == null) ? 0 : getMatricula().hashCode());
 		result = prime * result + ((getModelo() == null) ? 0 : getModelo().hashCode());
 		return result;
 	}
@@ -82,10 +95,10 @@ public class Coche extends VehiculoConRuedas {
 		if (getClass() != obj.getClass())
 			return false;
 		Coche other = (Coche) obj;
-		if (matricula == null) {
-			if (other.matricula != null)
+		if (getMatricula() == null) {
+			if (other.getMatricula() != null)
 				return false;
-		} else if (!matricula.equals(other.matricula))
+		} else if (!getMatricula().equals(other.getMatricula()))
 			return false;
 		if (getModelo() == null) {
 			if (other.getModelo() != null)
