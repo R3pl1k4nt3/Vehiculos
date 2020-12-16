@@ -54,13 +54,11 @@ public class Vehiculo implements Acelerable, Comparable<Vehiculo> {
 	}
 
 	@Override
-<<<<<<< HEAD
 	public int compareTo(Vehiculo vehiculo) {
 		return getModelo().compareTo(vehiculo.getModelo());
 	}
 	
 	
-=======
 	public int compareTo(Vehiculo other) {
 		int resultado = COMPARADOR_LONGITUD_MODELO.compare(this, other);
 		if(resultado == 0) {
@@ -73,6 +71,5 @@ public class Vehiculo implements Acelerable, Comparable<Vehiculo> {
 		return resultado;
 		//return getModelo().compareTo(other.getModelo());
 	}
->>>>>>> refs/remotes/origin/main
 
 }
